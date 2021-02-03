@@ -39,17 +39,34 @@ int fib_iter(int n){
   }
 }
 
-int main()
-{
-  // // fib sequence (recursion)
-  // int i;
-  // for (i=0; i < 10 ; i++){
-  //   std::cout << fib(i) << ", ";
-  // }
-  // std::cout << "\n";
+int stepPerms(int n){
 
-  // fib-iter (loop)
+  if(n == 0){
+    return 1;
+  }
+  if(n == 1){
+    return 1;
+  }
+  if(n == 2){
+    return 2;
+  }
+  if(n == 3){
+    return 4;
+  }
+  
+  return stepPerms(n-1) + stepPerms(n-2) + stepPerms(n-3);
+}
+
+int main(){
+  
+  std::cout << fact(10) << "\n";
+  std::cout << fib(10) << "\n";
   std::cout << fib_iter(10) << "\n";
 
+  std::cout << stepPerms(5) << "\n";
+
+  for(int i = 0; i <= 3; i++){
+    std::cout << i << " steps: " << stepPerms(i) << "\n";
+  }
   return 0;
 }

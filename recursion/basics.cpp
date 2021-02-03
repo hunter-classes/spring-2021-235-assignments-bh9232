@@ -54,7 +54,7 @@ int stepPerms(int n){
     return 4;
   }
   
-  return stepPerms(n-1) + stepPerms(n-2) + stepPerms(n-3);
+  return stepPerms(n-1) + stepPerms(n-2) + stepPerms(n-3) % 10000000007;
 }
 
 int main(){
@@ -63,10 +63,17 @@ int main(){
   std::cout << fib(10) << "\n";
   std::cout << fib_iter(10) << "\n";
 
-  std::cout << stepPerms(5) << "\n";
 
+  //spacing
+  std::cout << "\n";
+
+  // hackerranks problems
   for(int i = 0; i <= 3; i++){
     std::cout << i << " steps: " << stepPerms(i) << "\n";
   }
+
+  std::cout << stepPerms(5) << "\n"; //should be 13
+  std::cout << stepPerms(10) << "\n";
+
   return 0;
 }

@@ -39,41 +39,11 @@ int fib_iter(int n){
   }
 }
 
-int stepPerms(int n){
-
-  if(n == 0){
-    return 1;
-  }
-  if(n == 1){
-    return 1;
-  }
-  if(n == 2){
-    return 2;
-  }
-  if(n == 3){
-    return 4;
-  }
-  
-  return stepPerms(n-1) + stepPerms(n-2) + stepPerms(n-3) % 10000000007;
-}
-
 int main(){
   
   std::cout << fact(10) << "\n";
   std::cout << fib(10) << "\n";
   std::cout << fib_iter(10) << "\n";
-
-
-  //spacing
-  std::cout << "\n";
-
-  // hackerranks problems
-  for(int i = 0; i <= 3; i++){
-    std::cout << i << " steps: " << stepPerms(i) << "\n";
-  }
-
-  std::cout << stepPerms(5) << "\n"; //should be 13
-  std::cout << stepPerms(10) << "\n";
 
   return 0;
 }

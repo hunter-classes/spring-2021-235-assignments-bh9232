@@ -9,6 +9,7 @@ void print(std::vector<int> arr){
   std::cout << "\n";
 }
 
+// Brian Hong
 std::vector<int> merge(std::vector<int> left, std::vector<int> right){
   std::vector<int> fin;
 
@@ -37,6 +38,7 @@ std::vector<int> merge(std::vector<int> left, std::vector<int> right){
   return fin;
 }
 
+// Brian Hong
 std::vector<int> msort(std::vector<int> arr){
   if(arr.size() < 2){
     return arr;

@@ -60,8 +60,6 @@ std::vector<int> msort(std::vector<int> arr){
   return arr;
 }
 
-
-
 int main(){
   std::vector<int> arr = {0,2,7,5,6,9,8,4,3,1,10};
   print(arr);
